@@ -3,7 +3,7 @@ import java.util.*;
 public class GarageGame {
     public static void main(String args[])
     {
-        // 입력받아서 큐만들기
+        // 1. 입력받아서 큐만들기
         Scanner sc = new Scanner(System.in);
         int N = Integer.parseInt(sc.nextLine()); // 차고지 수(<=4)
 
@@ -27,5 +27,16 @@ public class GarageGame {
             System.out.println("k : " + k);
             System.out.println(chargoList.get(k).toString());
         }
+
+        // 2. ground 만들기 (N x N)
+        int[][] ground = new int[N][N];
+
+        System.out.println(startSimulation(chargoList, ground));
+
+    }
+
+    // 시뮬레이션 시작 함수
+    public static int startSimulation(List<Queue<Integer>> chargoList, int[][] ground){
+
     }
 }
